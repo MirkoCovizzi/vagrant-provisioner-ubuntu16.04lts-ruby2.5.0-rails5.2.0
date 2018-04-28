@@ -21,4 +21,6 @@ sudo -H -u vagrant bash -i -c  "gem install rails -v 5.2.0"
 
 sudo -H -u vagrant bash -i -c  "rbenv rehash"
 
-mkdir /vagrant/environment
+if [ ! -d "/vagrant/environment" ]; then
+  mkdir /vagrant/environment
+fi
